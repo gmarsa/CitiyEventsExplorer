@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "Sunset Yoga in the Park",
+    "description": "Enjoy a relaxing yoga session at sunset.",
+    "category": "Health & Wellness",
+    "startDate": "2025-07-01T18:00:00Z",
+    "endDate": "2025-07-01T19:00:00Z",
+    "imageUrl": "https://picsum.photos/seed/yoga/600/300",
+    "location": {
+      "name": "Central Park",
+      "lat": 40.785091,
+      "lng": -73.968285
+    }
+  }
+]
