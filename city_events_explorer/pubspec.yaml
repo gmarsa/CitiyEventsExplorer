@@ -1,5 +1,5 @@
 name: city_events_explorer
-description: "A new Flutter project."
+description: "A Flutter application for exploring city events"
 publish_to: 'none'
 version: 0.1.0
 
@@ -10,10 +10,37 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # State Management
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.5
+  
+  # Storage
+  shared_preferences: ^2.2.2
+  
+  # HTTP & JSON
+  http: ^1.1.0
+  json_annotation: ^4.8.1
+  
+  # Utils
+  intl: ^0.20.2
+  uuid: ^4.2.1
+  
+  # UI
+  cached_network_image: ^3.3.0
+  flutter_map: ^8.1.1
+  latlong2: ^0.9.1
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
+
+  # Testing
+  mockito: ^5.4.3
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
