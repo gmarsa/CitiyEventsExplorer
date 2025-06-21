@@ -95,8 +95,8 @@ void main() {
       );
       await tester.pump();
 
-      // Act
-      await tester.tap(find.byType(InkWell));
+      // Act - Tap on the Card widget instead of InkWell to be more specific
+      await tester.tap(find.byType(Card));
       await tester.pump();
 
       // Assert
