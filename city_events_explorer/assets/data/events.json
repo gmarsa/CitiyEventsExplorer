@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Sunset Yoga in the Park",
-    "description": "Enjoy a relaxing yoga session at sunset.",
+    "description": "Enjoy a relaxing yoga session as the sun sets over the city. Perfect for beginners and experienced practitioners alike. Bring your own mat and water bottle. This outdoor session will help you unwind from the day while connecting with nature and fellow yoga enthusiasts.",
     "category": "Health & Wellness",
     "startDate": "2025-07-01T18:00:00Z",
     "endDate": "2025-07-01T19:00:00Z",
@@ -11,6 +11,104 @@
       "name": "Central Park",
       "lat": 40.785091,
       "lng": -73.968285
+    }
+  },
+  {
+    "id": "2",
+    "title": "Tech Meetup: Flutter Development",
+    "description": "Join fellow Flutter developers for an evening of networking, learning, and sharing experiences. We'll have presentations on the latest Flutter features, best practices, and Q&A sessions with industry experts.",
+    "category": "Technology",
+    "startDate": "2025-07-03T19:00:00Z",
+    "endDate": "2025-07-03T21:00:00Z",
+    "imageUrl": "https://picsum.photos/seed/tech/600/300",
+    "location": {
+      "name": "Innovation Hub",
+      "lat": 40.748817,
+      "lng": -73.985428
+    }
+  },
+  {
+    "id": "3",
+    "title": "Summer Food Festival",
+    "description": "Taste the best local cuisine from over 50 food vendors. Live music, cooking demonstrations, and family-friendly activities throughout the day. Don't miss the chef competitions and wine tasting sessions.",
+    "category": "Food & Drink",
+    "startDate": "2025-07-05T11:00:00Z",
+    "endDate": "2025-07-05T22:00:00Z",
+    "imageUrl": "https://picsum.photos/seed/food/600/300",
+    "location": {
+      "name": "Riverside Park",
+      "lat": 40.787735,
+      "lng": -73.972384
+    }
+  },
+  {
+    "id": "4",
+    "title": "Classical Music Concert",
+    "description": "An enchanting evening of classical music featuring the City Symphony Orchestra. The program includes works by Mozart, Beethoven, and contemporary composers. Perfect for music lovers of all ages.",
+    "category": "Arts & Culture",
+    "startDate": "2025-07-07T20:00:00Z",
+    "endDate": "2025-07-07T22:30:00Z",
+    "imageUrl": "https://picsum.photos/seed/music/600/300",
+    "location": {
+      "name": "Concert Hall",
+      "lat": 40.773971,
+      "lng": -73.965355
+    }
+  },
+  {
+    "id": "5",
+    "title": "Marathon Training Session",
+    "description": "Prepare for the upcoming city marathon with our professional training group. Suitable for runners of all levels. We'll cover technique, nutrition, and mental preparation strategies.",
+    "category": "Sports",
+    "startDate": "2025-07-10T07:00:00Z",
+    "endDate": "2025-07-10T09:00:00Z",
+    "imageUrl": "https://picsum.photos/seed/running/600/300",
+    "location": {
+      "name": "City Stadium",
+      "lat": 40.829884,
+      "lng": -73.926208
+    }
+  },
+  {
+    "id": "6",
+    "title": "Photography Workshop",
+    "description": "Learn the fundamentals of digital photography in this hands-on workshop. Topics include composition, lighting, and post-processing techniques. Camera provided if needed.",
+    "category": "Arts & Culture",
+    "startDate": "2025-07-12T14:00:00Z",
+    "endDate": "2025-07-12T17:00:00Z",
+    "imageUrl": "https://picsum.photos/seed/photo/600/300",
+    "location": {
+      "name": "Art Center",
+      "lat": 40.754932,
+      "lng": -73.984016
+    }
+  },
+  {
+    "id": "7",
+    "title": "Startup Pitch Night",
+    "description": "Watch emerging entrepreneurs pitch their innovative ideas to a panel of investors and industry experts. Network with like-minded individuals and discover the next big thing in tech.",
+    "category": "Business",
+    "startDate": "2025-07-15T18:30:00Z",
+    "endDate": "2025-07-15T21:00:00Z",
+    "imageUrl": "https://picsum.photos/seed/startup/600/300",
+    "location": {
+      "name": "Business Center",
+      "lat": 40.761431,
+      "lng": -73.977622
+    }
+  },
+  {
+    "id": "8",
+    "title": "Meditation & Mindfulness",
+    "description": "Find inner peace and reduce stress through guided meditation and mindfulness practices. Suitable for beginners and experienced practitioners. Learn techniques you can use in daily life.",
+    "category": "Health & Wellness",
+    "startDate": "2025-07-18T08:00:00Z",
+    "endDate": "2025-07-18T09:30:00Z",
+    "imageUrl": "https://picsum.photos/seed/meditation/600/300",
+    "location": {
+      "name": "Wellness Center",
+      "lat": 40.768731,
+      "lng": -73.981908
     }
   }
 ]
