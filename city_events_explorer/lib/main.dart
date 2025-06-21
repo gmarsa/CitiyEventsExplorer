@@ -18,9 +18,11 @@ class CityEventsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Crear data sources directamente
     final EventsLocalDataSource eventsDataSource = EventsLocalDataSourceImpl();
     final FavouritesLocalDataSource favouritesDataSource = FavouritesLocalDataSourceImpl();
 
+    // Crear repositories con data sources inyectados
     final EventsRepositoryImpl eventsRepository = EventsRepositoryImpl(
       localDataSource: eventsDataSource,
     );
@@ -28,29 +30,29 @@ class CityEventsApp extends StatelessWidget {
       localDataSource: favouritesDataSource,
     );
 
-    return MaterialApp(
-      title: 'City Events Explorer',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-          brightness: Brightness.light,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<EventsBloc>(
+          create: (context) => EventsBloc(
+            eventsRepository: eventsRepository,
+          ),
         ),
-        useMaterial3: true,
-      ),
-      home: MultiBlocProvider(
-        providers: [
-          BlocProvider<EventsBloc>(
-            create: (context) => EventsBloc(
-              eventsRepository: eventsRepository,
-            ),
+        BlocProvider<FavouritesBloc>(
+          create: (context) => FavouritesBloc(
+            favouritesRepository: favouritesRepository,
           ),
-          BlocProvider<FavouritesBloc>(
-            create: (context) => FavouritesBloc(
-              favouritesRepository: favouritesRepository,
-            ),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'City Events Explorer',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+            brightness: Brightness.light,
           ),
-        ],
-        child: const HomePage(),
+          useMaterial3: true,
+        ),
+        home: const HomePage(),
       ),
     );
   }

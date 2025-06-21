@@ -7,6 +7,7 @@ import '../blocs/favourites/favourites_bloc.dart';
 import '../blocs/favourites/favourites_event.dart';
 import '../widgets/events_list.dart';
 import '../widgets/search_and_filters.dart';
+import 'favourites_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -52,10 +53,9 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO: Navegate favourites screen
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Favourites page coming soon!'),
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const FavouritesPage(),
             ),
           );
         },
