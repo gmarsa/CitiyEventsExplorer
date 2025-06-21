@@ -138,16 +138,8 @@ void main() {
         // Arrange
         when(mockDataSource.getEvents()).thenAnswer((_) async => testEvents);
 
-        // Debug: Verificar qué datos tenemos
-        final allEvents = await repository.getEvents();
-        print('Total events: ${allEvents.length}');
-        for (final event in allEvents) {
-          print('Event: ${event.id}, Category: "${event.category}"');
-        }
-
         // Act - Buscar con 'technology' en minúsculas
         final result = await repository.filterEventsByCategory('technology');
-        print('Filtered results: ${result.length}');
 
         // Assert - Debe encontrar el evento con categoría 'Technology' (con T mayúscula)
         expect(result.length, 1);

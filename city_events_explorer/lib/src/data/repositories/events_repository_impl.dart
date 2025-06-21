@@ -3,7 +3,9 @@ import '../../domain/repositories/events_repository.dart';
 import '../datasources/events_local_datasource.dart';
 
 class EventsRepositoryImpl implements EventsRepository {
-  EventsRepositoryImpl({required this.localDataSource});
+  const EventsRepositoryImpl({
+    required this.localDataSource,
+  });
 
   final EventsLocalDataSource localDataSource;
 
@@ -43,9 +45,9 @@ class EventsRepositoryImpl implements EventsRepository {
     try {
       final List<Event> allEvents = await localDataSource.getEvents();
       
-      return allEvents
-          .where((Event event) => event.category == category)
-          .toList();
+      return allEvents.where((Event event) {
+        return event.category.toLowerCase().trim() == category.toLowerCase().trim();
+      }).toList();
     } catch (e) {
       throw Exception('Failed to filter events by category: $e');
     }
@@ -60,15 +62,16 @@ class EventsRepositoryImpl implements EventsRepository {
       final List<Event> allEvents = await localDataSource.getEvents();
       
       return allEvents.where((Event event) {
-        return event.startDate.isAfter(startDate.subtract(const Duration(days: 1))) &&
-               event.startDate.isBefore(endDate.add(const Duration(days: 1)));
+        final DateTime eventStart = event.startDate;
+        return eventStart.isAfter(startDate.subtract(const Duration(days: 1))) &&
+               eventStart.isBefore(endDate.add(const Duration(days: 1)));
       }).toList();
     } catch (e) {
       throw Exception('Failed to filter events by date range: $e');
     }
   }
 
-  @override
+  @override  
   Future<List<String>> getCategories() async {
     try {
       final List<Event> allEvents = await localDataSource.getEvents();
@@ -77,9 +80,10 @@ class EventsRepositoryImpl implements EventsRepository {
           .map((Event event) => event.category)
           .toSet();
       
-      final List<String> sortedCategories = categories.toList()..sort();
+      final List<String> categoriesList = categories.toList();
+      categoriesList.sort();
       
-      return sortedCategories;
+      return categoriesList;
     } catch (e) {
       throw Exception('Failed to get categories: $e');
     }
